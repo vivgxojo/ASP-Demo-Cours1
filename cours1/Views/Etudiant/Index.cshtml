@@ -1,0 +1,13 @@
+﻿@using cours1.Models
+<h1>Liste de classe</h1>
+<ul>
+@foreach (Etudiant etudiant in @ViewBag.ListeEtudiants as List<Etudiant>)
+{
+	<li>
+		No : @etudiant.NumeroEtudiant, Nom : 
+		<a href="~/Find/@etudiant.NumeroEtudiant">
+			@etudiant.Nom
+		</a>
+	</li>
+}
+</ul>

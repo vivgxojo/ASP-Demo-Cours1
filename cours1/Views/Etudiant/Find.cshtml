@@ -1,0 +1,10 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1>Étudiant</h1>
+<p>Numéro d'étudiant : @ViewBag.EtudiantId</p>
+<p>Nom : @ViewBag.Nom</p>
+<img src="~/images/597747.png" alt="avatar" width="100"/>
+<p>
+	<a asp-controller="Etudiant" asp-action="Index">
+		Retourner à la liste de classe
+	</a>
+</p>
