@@ -1,0 +1,26 @@
+﻿@using cours1.Models
+@using cours1.Models.ViewModels
+@model Classe
+@{
+	Layout = "_layout";
+}
+<h2>Classe</h2>
+
+<p>Titre du cours : @Model.Cours</p>
+@{
+	if (!string.IsNullOrEmpty(Model.Enseignant))
+	{
+		<p>Enseignant : @Model.Enseignant</p>
+	}
+
+	<ul>
+		@foreach(Etudiant etudiant in Model.Etudiants)
+		{
+			<li>
+				@etudiant.NumeroEtudiant :
+				<a href="~/Find/@etudiant.NumeroEtudiant">@etudiant.Nom</a>
+			</li>
+		}
+	</ul>
+}
+

@@ -1,0 +1,16 @@
+﻿@using cours1.Models
+@model List<Etudiant>
+
+<h1>Liste de classe</h1>
+
+<ul>
+
+	@foreach (Etudiant etudiant in @Model)
+	{
+		<li>@etudiant.NumeroEtudiant :
+			<a href="~/Find/@etudiant.NumeroEtudiant">@etudiant.Nom</a>
+		</li>
+	}
+
+</ul>
+
